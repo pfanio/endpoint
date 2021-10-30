@@ -1,5 +1,11 @@
 const Express = require('express')
+const cors = require('cors')
 const app = Express()
+
+const options = {
+    origin: "*"
+  }
+  app.use(cors(options));
 
 app.get("/home", (req, res)=>{
     res.json({mensagem: 'Página Home', codigo: 200} )
