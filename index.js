@@ -2,6 +2,11 @@ const Express = require('express')
 const cors = require('cors')
 const app = Express()
 
+const logins = [
+    {username: "paulo@ph.com", password:"1234"},
+    {username: "jose@bol.com", password:"4768"}
+]
+
 const options = {
     origin: "*"
   }
@@ -9,6 +14,18 @@ const options = {
 
 app.get("/home", (req, res)=>{
     res.json({mensagem: 'Página Home', codigo: 200} )
+})
+
+app.get("/login", (req, res)=>{
+
+    username = req.body.username;
+    password = req.body.password;
+
+    res.json({user: username, pass: password});
+    
+    //res.json({token: null} )
+
+    //res.json({token: "auefiuefah837602"} )
 })
 
 app.get("/faleconosco", (req, res)=>{
