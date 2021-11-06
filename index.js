@@ -19,10 +19,10 @@ app.get("/home", (req, res) => {
 
 app.get("/login", (req, res) => {
 
-    //username = req.body.username;
-    //password = req.body.password;
+    username = req.body.username;
+    password = req.body.password;
 
-    res.json(req.body)
+    res.json({user: username, pass: password})
 
     //res.json({token: null} )
 
