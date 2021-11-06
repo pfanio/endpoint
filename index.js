@@ -16,7 +16,7 @@ app.get("/faleconosco", (req, res)=>{
 })
 
 app.get("/vagas", (req, res)=>{
-    res.json({mensagem: 'No momento não temos vagas!', codigo: 200} )
+    res.json({mensagem: 'No momento não temos vagas para desenvolvedores!', codigo: 200} )
 })
 
 app.listen(process.env.PORT || 8020) 
