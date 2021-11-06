@@ -1,6 +1,7 @@
 const Express = require('express')
 const cors = require('cors')
 const app = Express()
+app.use(express.json());
 
 const logins = [
     {username: "paulo@ph.com", password:"1234"},
