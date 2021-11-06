@@ -22,11 +22,15 @@ app.get("/login", (req, res) => {
     username = req.body.username;
     password = req.body.password;
 
-    res.json({user: username, pass: password})
+    for(var i = 0; i < logins.length; i++){
+        if(logins[i].username == username && logins[i].password == password){
+            res.json({token: "auefiuefah837602"} )
+        }
+      }
+    //res.json({user: username, pass: password})
+    res.json({token: null} )
 
-    //res.json({token: null} )
-
-    //res.json({token: "auefiuefah837602"} )
+    //
 })
 
 app.get("/faleconosco", (req, res) => {
