@@ -17,7 +17,7 @@ app.get("/home", (req, res) => {
     res.json({ mensagem: 'Página Home', codigo: 200 })
 })
 
-app.get("/login", (req, res) => {
+app.post("/login", (req, res) => {
 
     username = req.body.username;
     password = req.body.password;
