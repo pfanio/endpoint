@@ -14,7 +14,8 @@ const options = {
 app.use(cors(options));
 
 app.get("/home", (req, res) => {
-    res.json({ mensagem: 'Página Home', codigo: 200 })
+    //res.json({ mensagem: 'Página Home', codigo: 200 })
+    res.json(logins);
 })
 
 app.post("/login", (req, res) => {
